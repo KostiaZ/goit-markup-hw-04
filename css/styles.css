@@ -352,7 +352,6 @@ justify-content: center;
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-    border: 1px solid var(--border-card);
 }
 
 .filter-list .item:nth-child(3n) {
@@ -382,12 +381,18 @@ justify-content: center;
 .filter-list .card-title {
     padding: 20px 24px;
     text-align: left;
+    border-left: 1px solid var(--border-card);
+    border-bottom: 1px solid var(--border-card);
+    border-right: 1px solid var(--border-card);
 }
 
 .filter-list .link{
     text-decoration: none;
 }
 
+.filter-list .img{
+    display: block;
+}
 
 /*-footer-*/
 
