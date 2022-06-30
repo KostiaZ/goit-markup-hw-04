@@ -5,7 +5,7 @@
     --accent: #2196f3;
     --font-p: #757575;
     --header-border: #ececec;
-    --bg-order: #2f303a;
+    --bg-order: #c4c4c4;
     --font-order: #fff;
     --font-active-button: #fff;
     --bg-hover-buton-order: #188ce8;
@@ -16,6 +16,56 @@
     --bg-button: #f5f4fa;
     --border-card: #eeeeee;
 }
+
+/*-RESET-*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Класс для обнуления базовых свойств у списков (ul) */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Класс для обнуления базовых свойств у ссылок */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Свойства для корректного отображения картинок */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Свойства для обнуления курсива у address */
+address {
+    font-style: normal;
+}
+
 
 /*-base-*/
 body {
@@ -39,11 +89,6 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
     text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul {
-    padding: 0;
-    margin: 0;
 }
 
 /*-UI home page-*/
@@ -153,9 +198,25 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 /*-order-*/
 
-.order{
+.order {
     padding: 200px 0px;
     background-color: var(--bg-order);
+}
+
+.overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+    ), 
+    url(../images/Img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .order-title{
@@ -191,9 +252,6 @@ background-color: var(--bg-hover-buton-order);
 
 /*-preferences-*/
 
-.preferences {
-}
-
 .pref-list {
     display: flex;
     flex-wrap: wrap;
@@ -203,6 +261,32 @@ background-color: var(--bg-hover-buton-order);
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
     text-align: left;
+}
+
+.pref-list .item::before{
+    display: block;
+    content: "";
+    height: 120px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-our-team);
+}
+
+.icon-antenna::before{
+    background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before{
+    background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before{
+    background-image: url(../images/diagram.svg);
+}
+
+.icon-astro::before{
+    background-image: url(../images/astronaut.svg);
 }
 
 .pref-list .item:nth-child(4n){
@@ -306,6 +390,21 @@ justify-content: center;
     letter-spacing: 0.03em;
 }
 
+/*-Clients-*/
+
+.clients .title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--font-title);
+}
+
+
+
+
 /*-UI portfolio-*/
 /*-buttons-*/
 
@@ -391,7 +490,7 @@ justify-content: center;
 }
 
 .filter-list .img{
-    display: block;
+ display: block;   
 }
 
 /*-footer-*/
@@ -401,6 +500,10 @@ justify-content: center;
     background-color: var(--bg-footer);
     line-height: 1.71;
     letter-spacing: 0.03em;
+}
+
+.flex {
+    display: flex;
 }
 
 .footer .link{
@@ -444,4 +547,13 @@ justify-content: center;
 
 .footer-contacts .mail {
     margin-bottom: 9px;
+}
+
+.footer .title {
+    color: var(--footer-text);
+    text-transform: uppercase;
+}
+
+.footer .button{
+    v
 }
